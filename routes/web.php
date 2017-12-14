@@ -17,3 +17,9 @@ Route::get('/insertThe', 'TheController@index');
 
 Route::post('/theiere/insert', 'TheiereController@insertOne');
 Route::post('/the/insert', 'TheController@insertOne');
+
+Route::get('/theiere/update/{id}', 'TheiereController@updateOne');
+Route::post('/theiere/update', 'TheiereController@updateOneAction');
+
+Route::get('/the/update/{id}', 'TheController@updateOne');
+Route::post('/the/update', 'TheController@updateOneAction');

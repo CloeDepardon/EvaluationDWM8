@@ -27,19 +27,12 @@
           <th scope="col">En stock</th>
           <th scope="col">Supprimer</th>
           <th scope="col">Modifier</th>
-          <th scope="col">Ajouter</th>
         </tr>
 
       @foreach ($theieres as $theiere)
         <tr>
           <td> {{ $theiere->modele }} </td>
-
-          @if($theiere->reference)
-            <td> {{ $theiere->reference->reference }} </td>
-          @else
-            <td> Null</td>
-          @endif
-
+          <td> {{ $theiere->reference }} </td>
           <td> {{ $theiere->description }} </td>
           <td> {{ $theiere->prix }} </td>
 
@@ -64,24 +57,26 @@
            </form>
          </td>
          <td>
-           <form action="" method="get">
+          <form action="/theiere/update/{{$theiere->id}}" method="get">
              {{ csrf_field() }}
              <button type="submit" class="btn btn-outline-info delete-btn">
                <i class="fa fa-pencil" aria-hidden="true"></i>
              </button>
            </form>
          </td>
-         <td>
-           <form action="insertTheiere" method="get">
-             {{ csrf_field() }}
-             <button type="submit" class="btn btn-outline-info delete-btn">
-               <i class="fa fa-plus" aria-hidden="true"></i>
-             </button>
-           </form>
-         </td>
+
         </tr>
       @endforeach
+      <td>
+        <form action="insertTheiere" method="get">
+          {{ csrf_field() }}
+          <button type="submit" class="btn btn-outline-info delete-btn pull-right">
+            <i class="fa fa-plus" aria-hidden="true"> </i>
+          </button>
+        </form>
+      </td>
     </table>
+
   </div>
 
   <div class="col-lg-12">
@@ -96,7 +91,6 @@
           <th scope="col">En stock</th>
           <th scope="col">Supprimer</th>
           <th scope="col">Modifier</th>
-          <th scope="col">Ajouter</th>
         </tr>
 
       @foreach ($thes as $the)
@@ -123,18 +117,10 @@
            </form>
          </td>
          <td>
-           <form action="" method="get">
+           <form action="/the/update/{{$the->id}}" method="get">
              {{ csrf_field() }}
              <button type="submit" class="btn btn-outline-info delete-btn">
                <i class="fa fa-pencil" aria-hidden="true"></i>
-             </button>
-           </form>
-         </td>
-         <td>
-           <form action="/insertThe" method="get">
-             {{ csrf_field() }}
-             <button type="submit" class="btn btn-outline-info delete-btn">
-               <i class="fa fa-plus" aria-hidden="true"></i>
              </button>
            </form>
          </td>
@@ -142,6 +128,14 @@
 
         </tr>
       @endforeach
+      <td>
+        <form action="/insertThe" method="get">
+          {{ csrf_field() }}
+          <button type="submit" class="btn btn-outline-info delete-btn">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </button>
+        </form>
+      </td>
     </table>
   </div>
 

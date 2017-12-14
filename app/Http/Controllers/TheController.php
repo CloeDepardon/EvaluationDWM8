@@ -24,7 +24,7 @@ class TheController extends Controller
     public function insertOne(Request $request)
   {
       $the = new The;
-      $the->type_id = $request->type;
+      $the->type_id = $request->type;   
       $the->nom = $request->nom;
       $the->description = $request->description;
       $the->prix = $request->prix;
@@ -36,8 +36,30 @@ class TheController extends Controller
   {
    //
    }
-  public function updateOne(Request $request)
+  public function updateOne(Request $request, $id)
   {
-    //
+    $the = The::find($id);
+    $typesAll = Type::all();
+    // pour gérer le formulaire
+    $types = []; // array vide
+    foreach ($typesAll as $value) {
+      $types[$value->id] = $value->type;
+    }
+    return view('updateThe', ['types' => $types, 'the' => $the]);
   }
+
+  public function updateOneAction (Request $request)
+  {
+    $the = The::find($request->id);
+    $the->type_id = $request->type;
+    $the->nom = $request->nom;
+    $the->description = $request->description;
+    $the->prix = $request->prix;
+    $the->stock = $request->stock;
+    $the->save();
+    return redirect('/');
+  }
+
+
+
 }
