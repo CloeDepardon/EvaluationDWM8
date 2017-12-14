@@ -49,7 +49,7 @@
           <td> {{ $theiere->stock }} </td>
 
           <td>
-            <form action="" method="get">
+            <form action="/theiere/delete/{{$theiere->id}}" method="get">
               {{ csrf_field() }}
               <button type="submit" class="btn btn-outline-danger delete-btn">
                <i class="fa fa-times" aria-hidden="true"></i>
@@ -109,7 +109,7 @@
           <td> {{ $the->stock }} </td>
 
           <td>
-            <form action="" method="get">
+            <form action="/the/delete/{{$the->id}}" method="get">
               {{ csrf_field() }}
               <button type="submit" class="btn btn-outline-danger delete-btn">
                <i class="fa fa-times" aria-hidden="true"></i>

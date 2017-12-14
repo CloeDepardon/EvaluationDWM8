@@ -33,10 +33,16 @@ class TheiereController extends Controller
       $theiere->magasins()->attach($request->magasins);
       return redirect('/');
   }
-   public function deleteOne(Request $request)
-  {
-   //
-   }
+
+
+    public function deleteOne(Request $request, $id)
+    {
+      $theiere = Theiere::find($id);
+      $theiere->magasins()->detach(); //Enlève les entrées dans la table intermédiaire ! IMPORTANT !
+      $theiere->delete();
+      return redirect ('/');
+    }
+
 
    public function updateOne(Request $request, $id)
    {

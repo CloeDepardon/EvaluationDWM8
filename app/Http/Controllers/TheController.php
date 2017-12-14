@@ -24,7 +24,7 @@ class TheController extends Controller
     public function insertOne(Request $request)
   {
       $the = new The;
-      $the->type_id = $request->type;   
+      $the->type_id = $request->type;
       $the->nom = $request->nom;
       $the->description = $request->description;
       $the->prix = $request->prix;
@@ -32,10 +32,15 @@ class TheController extends Controller
       $the->save();
       return redirect('/');
   }
-   public function deleteOne(Request $request)
+
+  public function deleteOne(Request $request, $id)
   {
-   //
-   }
+    $the = The::find($id);
+    $the->delete();
+    return redirect ('/');
+  }
+
+
   public function updateOne(Request $request, $id)
   {
     $the = The::find($id);
