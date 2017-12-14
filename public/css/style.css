@@ -1,32 +1,139 @@
+/*
+COLORS
+fond vert : #83A891;
+fond gris : #F7F7F7;
+*/
+
+
+/*********************/
+/**** NAVIGATION *****/
+/*********************/
+
+.menu {
+  margin-left: 5%;
+}
+
 .myNavbar {
   display: flex;
   flex-direction: row;
-  background-color: grey;
   min-height: 7vh;
   align-items: center;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.navelement {
-  display: flex;
-  list-style: none;
-  justify-content: flex-start;
-  font-size: 20px;
-  text-transform: uppercase;
-  min-width: 200px;
+.title {
+ font-family: 'Open Sans', sans-serif;
+ text-transform: uppercase;
+ font-size: 17px;
 }
+
+
+/*********************/
+/******* LINKS *******/
+/*********************/
 
 a {
-  color: #fff;
   text-decoration: none;
   font-weight: 100;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a:hover {
   color: #fff;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 300;
 }
 
-.select-support {
-  width: 200px;
+
+/*********************/
+/***** SECTIONS ******/
+/*********************/
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #fff url("../img/background.jpg") center top no-repeat;
+  background-size: cover;
+
+}
+
+.white {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 90px;
+  font-weight: 100;
+}
+
+.logo {
+  margin: 15% auto;
+}
+
+main {
+  width: 100vw;
+}
+
+.table {
+  width: 50vw;
+  font-size: 14px;
+}
+
+.gestion {
+  background-color: #F7F7F7;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 5%;
+  border-radius: 20px;
+  padding:1%;
+}
+
+/*********************/
+/******* FORM ********/
+/*********************/
+
+label {
+  padding-right: 5px;
+  width: 120px;
+}
+
+.select-color {
+  width: 90px;
+  height: 80px;
+}
+
+/*********************/
+/******* TABLE *******/
+/*********************/
+
+.table {
+  padding-bottom: 30px;
+}
+
+.delete-btn {
+  cursor: pointer;
+}
+
+td:nth-child(1), td:nth-child(6) {
+  min-width: 160px;
+}
+
+ td:nth-child(5) {
+  min-width: 100px;
+}
+
+ td:nth-child(3) {
+   max-width: 170px;
+ }
+
+.theieres {
+  background-color: #fff;
+}
+
+h4 {
+  text-transform: uppercase;
+}
+
+.add {
+
 }

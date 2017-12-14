@@ -4,6 +4,7 @@
 @section('title', 'Nouvelle demande')
 @section('main')
 
+<div class="gestion">
   <h1>Insérer une théière </h1> <br>
   {!! Form::open(['url' => 'theiere/insert']) !!}
     <div class="form-group">
@@ -34,5 +35,7 @@
       {{{ Form::submit('Insérer', ['class' => 'btn btn-outline-info'])}}}
     </div>
   {!! Form::close() !!}
+</div>
+
 
 @endsection

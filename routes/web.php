@@ -12,6 +12,9 @@
 */
 
 Route::get('/', 'BaseController@index');
+
+Route::get('/gestion', 'BaseController@gestion');
+
 Route::get('/insertTheiere', 'TheiereController@index');
 Route::get('/insertThe', 'TheController@index');
 

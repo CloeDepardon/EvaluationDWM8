@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\The;
 use App\Type;
+use App\Magasin;
 
 class TheController extends Controller
 {
@@ -13,12 +14,17 @@ class TheController extends Controller
   {
       $thes = The::all();
       $typesAll = Type::all();
+      $magasinsAll = Magasin::all();
       // pour gérer le formulaire
       $types = []; // array vide
       foreach ($typesAll as $value) {
         $types[$value->id] = $value->type;
       }
-      return view('insertThe', ['thes' => $thes, 'types' => $types]);
+      $magasins = [];
+      foreach ($magasinsAll as $value) {
+        $magasins[$value->id] = $value->magasin;
+      }
+      return view('insertThe', ['thes' => $thes, 'types' => $types, 'magasins' => $magasins]);
   }
 
     public function insertOne(Request $request)
@@ -30,14 +36,16 @@ class TheController extends Controller
       $the->prix = $request->prix;
       $the->stock = $request->stock;
       $the->save();
-      return redirect('/');
+      $the->magasins()->attach($request->magasins);
+      return redirect('/gestion');
   }
 
   public function deleteOne(Request $request, $id)
   {
     $the = The::find($id);
+    $the->magasins()->detach(); //Enlève les entrées dans la table intermédiaire ! IMPORTANT !
     $the->delete();
-    return redirect ('/');
+    return redirect ('/gestion');
   }
 
 
@@ -45,12 +53,17 @@ class TheController extends Controller
   {
     $the = The::find($id);
     $typesAll = Type::all();
+    $magasinsAll = Magasin::all();
     // pour gérer le formulaire
     $types = []; // array vide
     foreach ($typesAll as $value) {
       $types[$value->id] = $value->type;
     }
-    return view('updateThe', ['types' => $types, 'the' => $the]);
+    $magasins = [];
+    foreach ($magasinsAll as $value) {
+      $magasins[$value->id] = $value->magasin;
+    }
+    return view('updateThe', ['types' => $types, 'the' => $the, 'magasins'=>$magasins]);
   }
 
   public function updateOneAction (Request $request)
@@ -61,8 +74,10 @@ class TheController extends Controller
     $the->description = $request->description;
     $the->prix = $request->prix;
     $the->stock = $request->stock;
+    $the->magasins()->detach();
+    $the->magasins()->attach($request->magasins);
     $the->save();
-    return redirect('/');
+    return redirect('/gestion');
   }
 
 

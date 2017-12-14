@@ -4,6 +4,7 @@
 @section('title', 'Modifier')
 @section('main')
 
+<div class="gestion">
   <h1>Modifier le produit </h1> <br>
   {!! Form::open(['url' => '/theiere/update']) !!}
     {!! Form::hidden('id', $theiere->id) !!}
@@ -36,5 +37,7 @@
       {{{ Form::submit('Insérer', ['class' => 'btn btn-outline-info'])}}}
     </div>
   {!! Form::close() !!}
+
+</div>
 
 @endsection

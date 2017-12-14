@@ -31,7 +31,7 @@ class TheiereController extends Controller
       $theiere->stock = $request->stock;
       $theiere->save();
       $theiere->magasins()->attach($request->magasins);
-      return redirect('/');
+      return redirect('/gestion');
   }
 
 
@@ -40,7 +40,7 @@ class TheiereController extends Controller
       $theiere = Theiere::find($id);
       $theiere->magasins()->detach(); //Enlève les entrées dans la table intermédiaire ! IMPORTANT !
       $theiere->delete();
-      return redirect ('/');
+      return redirect ('/gestion');
     }
 
 
@@ -67,7 +67,7 @@ class TheiereController extends Controller
      $theiere->magasins()->detach();
      $theiere->magasins()->attach($request->magasins);
      $theiere->save();
-     return redirect('/');
+     return redirect('/gestion');
    }
 
 
