@@ -32,6 +32,7 @@ class TheController extends Controller
       $the = new The;
       $the->type_id = $request->type;
       $the->nom = $request->nom;
+      $the->reference = $request->reference;
       $the->description = $request->description;
       $the->prix = $request->prix;
       $the->stock = $request->stock;
@@ -71,6 +72,7 @@ class TheController extends Controller
     $the = The::find($request->id);
     $the->type_id = $request->type;
     $the->nom = $request->nom;
+    $the->reference = $request->reference;
     $the->description = $request->description;
     $the->prix = $request->prix;
     $the->stock = $request->stock;

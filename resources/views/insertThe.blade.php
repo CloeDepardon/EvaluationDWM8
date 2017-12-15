@@ -13,7 +13,7 @@
       {{{ Form::select('type', $types,  ['required' => 'required', 'class' => 'select-one blue']) }}}
     </div>
     <div class="form-group">
-      {{{ Form::label('Nom') }}}
+      {{{ Form::label('Marque') }}}
       {{{ Form::text('nom', '',  ['required' => 'required', 'class' => 'blue']) }}}
     </div>
     <div class="form-group">

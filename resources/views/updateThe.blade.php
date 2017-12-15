@@ -19,7 +19,7 @@
     </div>
     <div class="form-group">
       {{{ Form::label('Référence') }}}
-      {{{ Form::text('reference', '', ['required' => 'required', 'class' => 'blue']) }}}
+      {{{ Form::text('reference', $the->reference, ['required' => 'required', 'class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Description') }}}

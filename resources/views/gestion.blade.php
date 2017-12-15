@@ -162,7 +162,7 @@
                       <td>
                         <form action="/the/delete/{{$the->id}}" method="get">
                           {{ csrf_field() }}
-                          <button type="submit" class="btn btn-outline-danger update-btn">
+                          <button type="submit" class="btn btn-outline-danger delete-btn">
                             <i class="fa fa-times" aria-hidden="true"></i>
                           </button>
                         </form>
@@ -170,7 +170,7 @@
                       <td>
                         <form action="/the/update/{{$the->id}}" method="get">
                           {{ csrf_field() }}
-                          <button type="submit" class="btn btn-outline-info delete-btn">
+                          <button type="submit" class="btn btn-outline-info update-btn">
                             <i class="fa fa-pencil" aria-hidden="true"></i>
                           </button>
                         </form>
