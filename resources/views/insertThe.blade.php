@@ -5,32 +5,32 @@
 @section('main')
 
 
-<div class="container gestion col-lg-8">
+<div class="container gestion Insert col-lg-8">
   <h1>Insérer un thé </h1> <br>
   {!! Form::open(['url' => 'the/insert']) !!}
     <div class="form-group">
       {{{ Form::label('Type') }}}
-      {{{ Form::select('type', $types) }}}
+      {{{ Form::select('type', $types, ['class' => 'select-one blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Nom') }}}
-      {{{ Form::text('nom') }}}
+      {{{ Form::text('nom', '', ['class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Référence') }}}
-      {{{ Form::text('reference') }}}
+      {{{ Form::text('reference', '', ['class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Description') }}}
-      {{{ Form::text('description') }}}
+      {{{ Form::text('description', '', ['class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Prix') }}}
-      {{{ Form::number('prix') }}}
+      {{{ Form::number('prix', '', ['class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('stock') }}}
-      {{{ Form::number('stock') }}}
+      {{{ Form::number('stock', '', ['class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Magasins') }}}

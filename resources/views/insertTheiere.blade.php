@@ -4,28 +4,28 @@
 @section('title', 'Nouvelle demande')
 @section('main')
 
-<div class="gestion">
+<div class="gestion Insert">
   <h1>Insérer une théière </h1> <br>
   {!! Form::open(['url' => 'theiere/insert']) !!}
     <div class="form-group">
       {{{ Form::label('Modèle') }}}
-      {{{ Form::text('modele') }}}
+      {{{ Form::text('modele', '', ['class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Référence') }}}
-      {{{ Form::text('reference') }}}
+      {{{ Form::text('reference', '', ['class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Description') }}}
-      {{{ Form::text('description') }}}
+      {{{ Form::text('description', '', ['class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Prix') }}}
-      {{{ Form::number('prix') }}}
+      {{{ Form::number('prix', '', ['class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('stock') }}}
-      {{{ Form::number('stock') }}}
+      {{{ Form::number('stock', '', ['class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Magasins') }}}

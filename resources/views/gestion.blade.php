@@ -120,9 +120,9 @@
           <div class="collapse" id="collapseExample">
             <div class="card card-body">
 
-              <input type="text" id="searchbar" onkeyup="searchBar()" placeholder="Vous cherchez une référence particulière ?"> <br>
+              <input type="text" id="searchbar2" onkeyup="searchBar2()" placeholder="Vous cherchez une référence particulière ?"> <br>
 
-              <table id="myTable" class="table table-responsive">
+              <table id="myTable2" class="table table-responsive">
                 <thead>
                   <tr>
                     <th class="align-middle" scope="col">Type</th>

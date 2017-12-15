@@ -11,8 +11,8 @@ class TheiereController extends Controller
 
   public function index()
   {
-      
-      $theieres = Theieres::all();
+
+      $theieres = Theiere::all();
       $magasinsAll = Magasin::all();
       // pour gérer le formulaire
       $magasins = []; // array vide
