@@ -9,11 +9,11 @@
   {!! Form::open(['url' => 'theiere/insert']) !!}
     <div class="form-group">
       {{{ Form::label('Modèle') }}}
-      {{{ Form::text('modele', '', ['class' => 'blue']) }}}
+      {{{ Form::text('modele', '', ['required' => 'required', 'class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Référence') }}}
-      {{{ Form::text('reference', '', ['class' => 'blue']) }}}
+      {{{ Form::text('reference', '', ['required' => 'required', 'class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Description') }}}
@@ -21,7 +21,7 @@
     </div>
     <div class="form-group">
       {{{ Form::label('Prix') }}}
-      {{{ Form::number('prix', '', ['class' => 'blue']) }}}
+      {{{ Form::number('prix', '', ['required' => 'required', 'class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('stock') }}}
@@ -29,7 +29,7 @@
     </div>
     <div class="form-group">
       {{{ Form::label('Magasins') }}}
-      {{{ Form::select('magasins[]', $magasins, 0, ['multiple' => true, 'class' => 'select-color']) }}}
+      {{{ Form::select('magasins[]', $magasins, 0, ['required' => 'required', 'multiple' => true, 'class' => 'select-color']) }}}
     </div>
     <div class="form-group">
       {{{ Form::submit('Insérer', ['class' => 'btn btn-primary'])}}}

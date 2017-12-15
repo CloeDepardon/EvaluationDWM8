@@ -11,15 +11,15 @@
 
     <div class="form-group">
       {{{ Form::label('Type') }}}
-      {{{ Form::select('type', $types, $the->type,  ['class' => 'blue']) }}}
+      {{{ Form::select('type', $types, $the->type,  ['required' => 'required', 'class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Nom') }}}
-      {{{ Form::text('nom', $the->nom, ['class' => 'blue']) }}}
+      {{{ Form::text('nom', $the->nom, ['required' => 'required', 'class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Référence') }}}
-      {{{ Form::text('reference', '', ['class' => 'blue']) }}}
+      {{{ Form::text('reference', '', ['required' => 'required', 'class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('Description') }}}
@@ -27,7 +27,7 @@
     </div>
     <div class="form-group">
       {{{ Form::label('Prix') }}}
-      {{{ Form::number('prix', $the->prix,  ['class' => 'blue']) }}}
+      {{{ Form::number('prix', $the->prix,  ['required' => 'required', 'class' => 'blue']) }}}
     </div>
     <div class="form-group">
       {{{ Form::label('stock') }}}
@@ -35,7 +35,7 @@
     </div>
     <div class="form-group">
       {{{ Form::label('Magasins') }}}
-      {{{ Form::select('magasins[]', $magasins, $the->magasins, ['multiple' => true, 'class' => 'select-color']) }}}
+      {{{ Form::select('magasins[]', $magasins, $the->magasins, ['required' => 'required', 'multiple' => true, 'class' => 'select-color']) }}}
     </div>
     <div class="form-group">
       {{{ Form::submit('Modifier', ['class' => 'btn btn-primary'])}}}
