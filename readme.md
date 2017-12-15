@@ -40,12 +40,13 @@ Les consignes de ce travail final étaient les suivantes : créer un CRUD foncti
   * J'ai souhaité mettre en place une pagination au sein des collapse afin de mieux gérer l'espace en cas de base de données très remplie. J'ai finalement décidé de la retirer car je n'ai pas réussi à gérer l'affiche du collapse. Lorsque je me rendais sur la page 2, la page de rechargeait et le collapse se fermait. Il fallait le réouvrir pour découvrir la page 2. N'ayant pas trouvé la solution, j'ai décidé de la mettre de côté. 
      
 - ### LE TEMPS :
-  * Un peu prise par le temps et retardée par une première (mauvaise) installation de Laravel, je n'ai pas développé tout ce que j'aurais voulu. Par exemple, j'aurais aimé classer les thés par type en mettant en place des filtres. J'aurais également voulu mettre en place la pagination que je n'ai pas réussi à faire fonctionner correctement. Cependant, je préfère que la plateforme et la BDD soient fonctionnelles. 
+  * Un peu prise par le temps et retardée par une première (mauvaise) installation de Laravel, je n'ai pas développé tout ce que j'aurais voulu. Par exemple, j'aurais aimé classer les thés par type en mettant en place des filtres. J'aurais également voulu mettre en place la pagination que je n'ai pas réussi à faire fonctionner correctement. Cependant, je préfère que la plateforme et la BDD soient fonctionnelles. 
   
   
  # Pour conclure
   
-  Pour terminer, je suis assez fière de rendre un site fonctionnel. 
+  Pour terminer, je suis assez fière de rendre un site fonctionnel et qui me plaîtt assez. 
+  Je pense avoir beaucoup appris ces derniers jours et je suis désormais plus familière avec Laravel.
  
   
   
