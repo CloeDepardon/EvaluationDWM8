@@ -22,6 +22,7 @@ class BaseController extends Controller
 
   public function gestion()
     	{
+        /*$theieres = Theiere::all();*/
         $theieres = Theiere::all();
         $thes = The::all();
         $typesAll = Type::all();

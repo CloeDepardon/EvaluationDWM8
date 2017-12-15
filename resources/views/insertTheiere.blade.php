@@ -32,7 +32,7 @@
       {{{ Form::select('magasins[]', $magasins, 0, ['multiple' => true, 'class' => 'select-color']) }}}
     </div>
     <div class="form-group">
-      {{{ Form::submit('Insérer', ['class' => 'btn btn-outline-info'])}}}
+      {{{ Form::submit('Insérer', ['class' => 'btn btn-primary'])}}}
     </div>
   {!! Form::close() !!}
 </div>

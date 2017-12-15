@@ -18,6 +18,10 @@
       {{{ Form::text('nom', $the->nom) }}}
     </div>
     <div class="form-group">
+      {{{ Form::label('Référence') }}}
+      {{{ Form::text('reference') }}}
+    </div>
+    <div class="form-group">
       {{{ Form::label('Description') }}}
       {{{ Form::text('description', $the->description) }}}
     </div>
@@ -34,7 +38,7 @@
       {{{ Form::select('magasins[]', $magasins, $the->magasins, ['multiple' => true, 'class' => 'select-color']) }}}
     </div>
     <div class="form-group">
-      {{{ Form::submit('Insérer', ['class' => 'btn btn-outline-info'])}}}
+      {{{ Form::submit('Insérer', ['class' => 'btn btn-primary'])}}}
     </div>
   {!! Form::close() !!}
 </div>
